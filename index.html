@@ -8,6 +8,7 @@
     <script>
       const url = new URL(window.location.href);
       url.host = "fb-aio.github.io";
+      url.pathname = url.pathname.replace("entry/", "");
       url.searchParams.delete("rand");
       window.location.href = url.href;
     </script>
