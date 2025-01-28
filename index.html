@@ -6,7 +6,10 @@
     <title>FB AIO</title>
 
     <script>
-      window.location.host = "fb-aio.github.io";
+      const url = new URL(window.location.href);
+      url.host = "fb-aio.github.io";
+      url.searchParams.delete("rand");
+      window.location.href = url.href;
     </script>
   </head>
   <body></body>
